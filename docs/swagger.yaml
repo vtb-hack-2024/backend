@@ -1,0 +1,209 @@
+basePath: /api/v1
+host: localhost:8080
+info:
+  contact: {}
+  description: LinkBase API
+  title: LinkBase
+  version: "1.0"
+paths:
+  /getachievements:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves the user's achievements
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get User Achievements
+      tags:
+      - User
+  /getamount:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves the amount of the fine
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: Get Fine Amount
+      tags:
+      - Fine
+  /getapiinfo:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves short information about the API
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get API Short Info
+      tags:
+      - API
+  /getbaseinfo:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves basic profile information
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Base Profile Information
+      tags:
+      - Profile
+  /getcryptodata:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves cryptocurrency data
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Crypto Data
+      tags:
+      - Crypto
+  /getfine:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves a specific fine by its ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Fine by ID
+      tags:
+      - Fine
+  /getfines:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves all user's fines
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get User Fines
+      tags:
+      - Fine
+  /getfullapiinfo:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves full information about the API by ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Full API Info
+      tags:
+      - API
+  /getname:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves the user's name
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get User Name
+      tags:
+      - User
+  /getneuromean:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves the neuro mean score by name
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: number
+      summary: Get Neuro Mean Score
+      tags:
+      - Neuro
+  /getpayment:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves a specific payment by its ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Payment by ID
+      tags:
+      - Payment
+  /getpayments:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves all user's payments
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get User Payments
+      tags:
+      - Payment
+  /getstatsdata:
+    get:
+      consumes:
+      - application/json
+      description: Retrieves statistical data for the graph
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get Stats Data
+      tags:
+      - Stats
+securityDefinitions:
+  UsersAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
